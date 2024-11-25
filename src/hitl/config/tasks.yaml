@@ -1,17 +1,13 @@
-research_task:
+invent_two_numbers:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Come up with two new integer numbers
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    The two new integer numbers
+  agent: inventor
 
-reporting_task:
+sum_two_numbers:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Sum up the two numbers
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    The sum of the two numbers
+  agent: mathematician
