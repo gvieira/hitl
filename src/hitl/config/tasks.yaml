@@ -1,3 +1,11 @@
+dumb_task:
+  description: >
+    Use the given tool to come up with a dumb output
+  expected_output: >
+    Dumb output
+  agent: inventor
+
+
 invent_two_numbers:
   description: >
     Come up with two new integer numbers
