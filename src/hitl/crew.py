@@ -1,6 +1,6 @@
 import os
 
-from crewai import Agent, Crew, Process, Task
+from crewai import LLM, Agent, Crew, Process, Task
 from crewai.project import CrewBase, after_kickoff, agent, before_kickoff, crew, task
 
 # Uncomment the following line to use an example of a custom tool
@@ -16,6 +16,7 @@ class Hitl:
 
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"
+    llm = LLM(model="bedrock/anthropic.claude-3-sonnet-20240229-v1:0")
 
     @agent
     def inventor(self) -> Agent:
@@ -23,17 +24,22 @@ class Hitl:
             config=self.agents_config["inventor"],
             # tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
             verbose=True,
+            llm=self.llm,
         )
 
     @agent
     def mathematician(self) -> Agent:
-        return Agent(config=self.agents_config["mathematician"], verbose=True)
+        return Agent(
+            config=self.agents_config["mathematician"],
+            verbose=True,
+            llm=self.llm,
+        )
 
     @task
     def invent_two_numbers(self) -> Task:
         return Task(
             config=self.tasks_config["invent_two_numbers"],
-            human_input=True,
+            # human_input=True,
         )
 
     @task
@@ -45,6 +51,7 @@ class Hitl:
     @crew
     def crew(self) -> Crew:
         """Creates the Hitl crew"""
+
         return Crew(
             agents=self.agents,  # Automatically created by the @agent decorator
             tasks=self.tasks,  # Automatically created by the @task decorator
