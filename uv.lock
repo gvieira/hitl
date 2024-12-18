@@ -545,7 +545,7 @@ wheels = [
 
 [[package]]
 name = "crewai"
-version = "0.83.0"
+version = "0.86.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "appdirs" },
@@ -556,7 +556,6 @@ dependencies = [
     { name = "instructor" },
     { name = "json-repair" },
     { name = "jsonref" },
-    { name = "langchain" },
     { name = "litellm" },
     { name = "openai" },
     { name = "openpyxl" },
@@ -572,9 +571,9 @@ dependencies = [
     { name = "tomli-w" },
     { name = "uv" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/40/66/7ecee1384178d77ce3f45787bb9b0b4cbef6795ebce00a6d9238ad01569b/crewai-0.83.0.tar.gz", hash = "sha256:d6f72af8ae91c931c3536a4df69c5b7d573cb7c85b8005caa857febb365b463f", size = 6455914 }
+sdist = { url = "https://files.pythonhosted.org/packages/da/23/69b3a6f9b8282e2c576ea9aaa6696d9cae0ac6c4e756aad47d2e4d66018a/crewai-0.86.0.tar.gz", hash = "sha256:30c8a1f185ea47c552e3aa4b4ef128c0cd5ca5e93c4b1454830b517c7bde55ed", size = 7730878 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/42/f2/3a55c375d5d106f19adfbedf271aa8a664ccf1ce7319506225d2a35108e1/crewai-0.83.0-py3-none-any.whl", hash = "sha256:918ff726267d66b8e05387e6e12af382088082190c7a03d215fc671d7e4784b6", size = 215366 },
+    { url = "https://files.pythonhosted.org/packages/c8/04/3808fe66acabebc5b5dcf00e4f290ae67a817d18ad96b043dd9769f51da8/crewai-0.86.0-py3-none-any.whl", hash = "sha256:ef1ff4b3df85a72eda2d64ea6fcd7f53461271e13822ff4937d0fa41055ef025", size = 192034 },
 ]
 
 [package.optional-dependencies]
@@ -584,7 +583,7 @@ tools = [
 
 [[package]]
 name = "crewai-tools"
-version = "0.14.0"
+version = "0.17.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -593,7 +592,6 @@ dependencies = [
     { name = "docx2txt" },
     { name = "embedchain" },
     { name = "lancedb" },
-    { name = "langchain" },
     { name = "openai" },
     { name = "pydantic" },
     { name = "pyright" },
@@ -602,9 +600,9 @@ dependencies = [
     { name = "requests" },
     { name = "selenium" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9b/6d/4fa91b481b120f83bb58f365203d8aa8564e8ced1035d79f8aedb7d71e2f/crewai_tools-0.14.0.tar.gz", hash = "sha256:510f3a194bcda4fdae4314bd775521964b5f229ddbe451e5d9e0216cae57f4e3", size = 815892 }
+sdist = { url = "https://files.pythonhosted.org/packages/cc/15/365f74e0e8313e7a3399bf01d908aa73575c823275f9196ec14c23159878/crewai_tools-0.17.0.tar.gz", hash = "sha256:2a2986000775c76bad45b9f3a2be857d293cf5daffe5f316abc052e630b1e5ce", size = 818983 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/ed/9f4e64e1507062957b0118085332d38b621c1000874baef2d1c4069bfd97/crewai_tools-0.14.0-py3-none-any.whl", hash = "sha256:0a804a828c29869c3af3253f4fc4c3967a3f80f06dab22e9bbe9526608a31564", size = 462980 },
+    { url = "https://files.pythonhosted.org/packages/f4/1d/976adc2a4e5237cb03625de412cd051dea7d524084ed442adedfda871526/crewai_tools-0.17.0-py3-none-any.whl", hash = "sha256:85cf15286684ecad579b5a497888c6bf8a079ca443f7dd63a52bf1709655e4a3", size = 467975 },
 ]
 
 [[package]]
@@ -1322,7 +1320,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "crewai", extras = ["tools"], specifier = ">=0.83.0,<1.0.0" }]
+requires-dist = [{ name = "crewai", extras = ["tools"], specifier = ">=0.86.0,<1.0.0" }]
 
 [[package]]
 name = "hpack"
