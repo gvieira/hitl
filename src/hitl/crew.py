@@ -48,7 +48,7 @@ class Hitl:
     def invent_two_numbers(self) -> Task:
         return Task(
             config=self.tasks_config["invent_two_numbers"],
-            # human_input=True,
+            human_input=True,
         )
 
     @task
