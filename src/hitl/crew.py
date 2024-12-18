@@ -2,20 +2,12 @@ import os
 
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, after_kickoff, agent, before_kickoff, crew, task
-from crewai.tools import tool
 
 # Uncomment the following line to use an example of a custom tool
 # from hitl.tools.custom_tool import MyCustomTool
 
 # Check our tools documentations for more information on how to use them
 # from crewai_tools import SerperDevTool
-
-
-@tool
-def dumb_tool() -> str:
-    """Use this tool to come up with a dumb output"""
-    dumb_value = os.getenv("SOMETHING", "default")
-    return f"Dumb output: {dumb_value}"
 
 
 @CrewBase
@@ -36,13 +28,6 @@ class Hitl:
     @agent
     def mathematician(self) -> Agent:
         return Agent(config=self.agents_config["mathematician"], verbose=True)
-
-    @task
-    def dumb_task(self) -> Task:
-        return Task(
-            config=self.tasks_config["dumb_task"],
-            tools=[dumb_tool],
-        )
 
     @task
     def invent_two_numbers(self) -> Task:
