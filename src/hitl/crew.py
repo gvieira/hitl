@@ -18,9 +18,9 @@ class Hitl:
     tasks_config = "config/tasks.yaml"
     llm = LLM(
         model="bedrock/anthropic.claude-3-sonnet-20240229-v1:0",
-        aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-        aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
-        aws_region_name=os.getenv("AWS_DEFAULT_REGION"),
+        aws_access_key_id=os.getenv("CUSTOM_AWS_ACCESS_KEY_ID"),
+        aws_secret_access_key=os.getenv("CUSTOM_AWS_SECRET_ACCESS_KEY"),
+        aws_region_name=os.getenv("CUSTOM_AWS_REGION_NAME"),
     )
 
     @agent
