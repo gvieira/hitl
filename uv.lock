@@ -1423,7 +1423,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = ">=1.35.83" },
-    { name = "crewai", extras = ["tools"], specifier = ">=0.95.0,<1.0.0" },
+    { name = "crewai", extras = ["tools"], specifier = ">=0.86.0,<1.0.0" },
 ]
 
 [[package]]
