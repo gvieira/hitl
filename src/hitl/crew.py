@@ -16,12 +16,6 @@ class Hitl:
 
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"
-    llm = LLM(
-        model="bedrock/anthropic.claude-3-sonnet-20240229-v1:0",
-        aws_access_key_id=os.getenv("CUSTOM_AWS_ACCESS_KEY_ID"),
-        aws_secret_access_key=os.getenv("CUSTOM_AWS_SCRT_ACCESS_KEY"),
-        aws_region_name=os.getenv("CUSTOM_AWS_RGN_NAME"),
-    )
 
     @agent
     def inventor(self) -> Agent:
@@ -29,7 +23,6 @@ class Hitl:
             config=self.agents_config["inventor"],
             # tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
             verbose=True,
-            llm=self.llm,
         )
 
     @agent
@@ -37,7 +30,6 @@ class Hitl:
         return Agent(
             config=self.agents_config["mathematician"],
             verbose=True,
-            llm=self.llm,
         )
 
     @task
