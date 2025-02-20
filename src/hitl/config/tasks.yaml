@@ -9,5 +9,5 @@ sum_two_numbers:
   description: >
     Sum up the two numbers
   expected_output: >
-    The sum of the two numbers, in Portuguese
+    The sum of the two numbers
   agent: mathematician
